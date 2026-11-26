@@ -1,3 +1,4 @@
+
 import { loginUser, registerUser } from "./api.js";
 
 const loginForm = document.getElementById("login-form");
@@ -17,12 +18,9 @@ if (loginForm) {
 
             if (result.access_token) {
                 localStorage.setItem("token", result.access_token);
-
                 alert("Login successful!");
-
                 window.location.href = "../dashboard.html";
-            } 
-            else {
+            } else {
                 alert(result.detail || "Login failed!");
             }
         }
@@ -52,9 +50,10 @@ if (registerForm) {
 
         try {
             const result = await registerUser({
-                full_name: name,
+                name: name,
                 email: email,
-                password: password
+                password: password,
+                confirm_password: confirmPassword
             });
 
             if (result.detail) {
@@ -62,10 +61,9 @@ if (registerForm) {
                 return;
             }
 
-            alert("Registration successful!");
-
+            alert(result.message || "Registration successful!");
             window.location.href = "login.html";
-        } 
+        }
         catch (error) {
             console.log(error);
             alert("Backend is not running or registration failed!");

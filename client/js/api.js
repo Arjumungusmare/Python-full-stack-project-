@@ -1,11 +1,13 @@
+
 const API_URL = "http://127.0.0.1:8000";
+
 export async function getBlogs() {
     const response = await fetch(`${API_URL}/blogs`);
     return response.json();
 }
 
 export async function loginUser(data) {
-    const response = await fetch(`${API_URL}/auth/login`, {
+    const response = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -17,7 +19,7 @@ export async function loginUser(data) {
 }
 
 export async function registerUser(data) {
-    const response = await fetch(`${API_URL}/auth/register`, {
+    const response = await fetch(`${API_URL}/api/auth/signup`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
