@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog - Blogify</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Blogify</a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<main class="editor-container">
+
+    <a href="dashboard.html" class="back-link">
+        ← Back to Dashboard
+    </a>
+
+    <div class="editor-box">
+
+        <p class="tagline">UPDATE YOUR STORY</p>
+        <h1>Edit Your Blog</h1>
+        <p class="editor-subtitle">
+            Make changes to your existing blog.
+        </p>
+
+        <form action="#" method="post">
+
+            <label for="title">Blog Title</label>
+            <input type="text" id="title" name="title"
+                   value="Small Habits, Big Changes" required>
+
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option>Personal Growth</option>
+                <option>Technology</option>
+                <option>Education</option>
+                <option>Lifestyle</option>
+                <option>Travel</option>
+                <option>Other</option>
+            </select>
+
+            <label for="content">Blog Content</label>
+            <textarea id="content" name="content"
+                      rows="12" required>Big changes do not always begin with big decisions.
+
+Sometimes, they begin with one small habit repeated every day.
+
+Choose one action that feels easy enough to repeat. Start small, stay patient and let your progress add up.</textarea>
+
+            <div class="editor-actions">
+                <a href="dashboard.html" class="btn btn-outline">
+                    Cancel
+                </a>
+
+                <button type="submit" class="btn">
+                    Save Changes
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</main>
+
+<footer>
+    <h2>Blogify</h2>
+    <p>Build. Share. Connect.</p>
+</footer>
+
+</body>
+</html>

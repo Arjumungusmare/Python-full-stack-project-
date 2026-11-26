@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog - Blogify</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Blogify</a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<main class="editor-container">
+
+    <a href="dashboard.html" class="back-link">
+        ← Back to Dashboard
+    </a>
+
+    <div class="editor-box">
+
+        <p class="tagline">SHARE YOUR THOUGHTS</p>
+        <h1>Create New Blog</h1>
+        <p class="editor-subtitle">
+            Write your story and share it with the world.
+        </p>
+
+        <form action="#" method="post">
+
+            <label for="title">Blog Title</label>
+            <input type="text" id="title" name="title"
+                   placeholder="Enter your blog title" required>
+
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option>Technology</option>
+                <option>Personal Growth</option>
+                <option>Education</option>
+                <option>Lifestyle</option>
+                <option>Travel</option>
+                <option>Other</option>
+            </select>
+
+            <label for="content">Blog Content</label>
+            <textarea id="content" name="content"
+                      rows="12"
+                      placeholder="Start writing your blog..."
+                      required></textarea>
+
+            <div class="editor-actions">
+                <a href="dashboard.html" class="btn btn-outline">
+                    Cancel
+                </a>
+
+                <button type="submit" class="btn">
+                    Publish Blog
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</main>
+
+<footer>
+    <h2>Blogify</h2>
+    <p>Build. Share. Connect.</p>
+</footer>
+
+</body>
+</html>
